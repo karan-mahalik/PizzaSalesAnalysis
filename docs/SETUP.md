@@ -1,26 +1,16 @@
-# Setup and verification boundaries
+# Setup and reproduction plan — Pizza Sales Performance Analysis
 
-Project: **Pizza Sales Performance Analysis**
+**Inputs now available:** see [asset manifest](ASSET_MANIFEST.md). **None of the uploaded SQL/PBIX files has been runtime-validated here.**
 
-## Expected environment
-- SQL Server + SSMS for T-SQL
-- Power BI Desktop for the real PBIX file
-- Excel or Power Query for source profiling
-- Python 3.11+ for the static repository validator (standard library only)
+1. Review `data/raw/pizza_sales.csv` and confirm its actual columns, date parsing, order grain and sharing permissions.
+2. On a **new development SQL Server database**, review `sql/Pizza_Sales.sql`; it includes a `CREATE DATABASE` statement. Import the CSV into a staging table named `pizza_sales` with verified types before executing selected queries.
+3. Treat `sql/01_schema_contract.sql` and `sql/02_analysis_queries.sql` as **illustrative only**; they use different modeled table names and are not drop-in replacements for the uploaded script.
+4. Open `powerbi/Pizza_Sales_Dashboard.pbix` in Power BI Desktop, check data-source paths, refresh and the report's actual DAX and relationships.
+5. Compare source-to-SQL-to-Power-BI totals, then document validated findings. The interview-practice workbook in `data/reference/` is not assumed to be used in the pizza analysis.
 
-## Steps
-1. Review [source and permissions](ASSET_MANIFEST.md) before publishing data.
-2. Inspect source column names, date parsing, primary keys, cardinality and currency conventions.
-3. Compare verified fields with [proposed SQL model](../sql/01_schema_contract.sql). Adapt examples to real data instead of changing source to fit the example.
-4. Import to a new **development** SQL Server database, not a production database. Review each statement before executing.
-5. Run relevant T-SQL. Reconcile row counts and KPI definitions with source.
-6. Open original PBIX in Power BI Desktop, review data connections, refresh, validate measures and capture screenshots only from real reports.
-7. Update [evidence](PROJECT_EVIDENCE.md), [metrics](METRICS.md), and [quality log](DATA_QUALITY.md).
-
-## Static check
+## Static validation
 ```bash
 python scripts/validate_repository.py
 ```
 
-GitHub Actions runs the same structure check. **It does not execute SQL Server, DAX, Power BI Desktop or validate numeric results.**
-
+The script checks required paths, zero-byte files, and simple relative Markdown links; it **does not run SQL Server or Power BI**, audit spreadsheet contents, or assert any measured KPI.

@@ -1,8 +1,8 @@
-# Dataset upload guide
+# Data files and provenance
 
-The original input files have **not** been uploaded to this repository. Store approved, publishable source files in [raw/](raw/README.md); store derived exports in [cleaned/](cleaned/README.md). Never overwrite the raw originals.
+- [data/raw/pizza_sales.csv](raw/pizza_sales.csv) — Raw pizza sales CSV
+- [data/reference/Excel_Interview_Practice_Dataset.xlsx](reference/Excel_Interview_Practice_Dataset.xlsx) — Separate interview-practice Excel workbook
 
-Document filenames, origin, data-sharing rights, date range, row counts, schema and known issues in [the asset manifest](../docs/ASSET_MANIFEST.md). Remove or anonymize personal/customer information **before** publishing it. If data cannot be shared, publish a data dictionary and safe synthetic sample labeled as synthetic.
+File presence is confirmed, **not file accuracy, source permission, safety or data quality**. Do not publish private customer/client data. Original raw data should not be edited to match proposed schemas. Record cleaning rules and counts in [data quality](../docs/DATA_QUALITY.md).
 
-The proposed field schema in [SQL documentation](../sql/01_schema_contract.sql) is not based on a verified dataset.
-
+The full file list, byte sizes and Git blob IDs are in the [asset manifest](../docs/ASSET_MANIFEST.md).

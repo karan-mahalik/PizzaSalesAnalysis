@@ -1,4 +1,5 @@
-# Cleaned data — upload audited exports
+# Cleaned data
 
-Place cleaned datasets here only after source checks. Record row-count changes, duplicate policies, missing-value handling, date conventions and transformations in [data quality](../../docs/DATA_QUALITY.md). No cleaned data has been supplied yet.
+No project-specific cleaned dataset was identified among the uploaded files.
 
+A cleaned label does not establish that quality checks passed. Reconcile with raw inputs; document changes, duplicate policies, date parsing and anomalies in [data quality](../../docs/DATA_QUALITY.md).

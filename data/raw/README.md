@@ -1,4 +1,5 @@
-# Raw data — upload original authorized input
+# Raw data
 
-Place permitted source workbooks/CSVs here. Preserve unmodified originals and their original filenames. Add file sizes, source, sheet names and row counts to [the asset manifest](../../docs/ASSET_MANIFEST.md). No actual dataset has been provided yet.
+- [pizza_sales.csv](pizza_sales.csv) — Raw pizza sales CSV
 
+Original uploaded source bytes were preserved on relocation. Verify schema, provenance, rights, de-identification, and row counts before making analytical claims.
