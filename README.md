@@ -1,5 +1,7 @@
 # Pizza Sales Performance Analysis
 
+**🌐 Professional portfolio:** [Karan Mahalik — Data Analyst & Power BI Developer](https://karan-mahalik-portfolio.vercel.app/)
+
 **SQL Server · T-SQL · Power BI · Sales KPIs**
 
 Karan Mahalik's analytics project, now organized with its **uploaded source assets**, supporting materials, and independently authored documentation.
