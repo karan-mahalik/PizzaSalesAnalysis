@@ -6,7 +6,6 @@ An end-to-end data analytics project focused on analysing pizza sales performanc
 
 #### 1. Sales Overview
 
-![Pizza Sales Overview](assets/pizza-sales-overview.png)
 
 The overview dashboard provides insights into:
 
@@ -20,7 +19,6 @@ The overview dashboard provides insights into:
 
 #### 2. Best & Worst Sellers Analysis
 
-![Pizza Sales Best and Worst Sellers](assets/pizza-sales-best-worst-sellers.png)
 
 This dashboard analyses product performance through:
 
